@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmay Tiwari — Developer & Builder</title>
+    <meta name="description" content="Tanmay Tiwari (@tanmayhutt) — Developer building high-quality tools, wallpapers, and embedded systems. Explore my GitHub projects.">
+    <meta property="og:title" content="Tanmay Tiwari — Developer & Builder">
+    <meta property="og:description" content="Building high-quality tools, wallpapers, and embedded systems.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/89214022?v=4">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Noise texture overlay -->
+    <div class="noise"></div>
+
+    <!-- Ambient background -->
+    <div class="ambient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Grid lines -->
+    <div class="grid-lines"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <i class="ri-code-s-slash-line"></i>
+                <span>tanmayhutt</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#stack" class="nav-link">Stack</a>
+                <a href="https://github.com/tanmayhutt" target="_blank" class="nav-cta">
+                    <i class="ri-github-fill"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Available for collaboration
+            </div>
+
+            <div class="hero-name-block reveal">
+                <h1 class="hero-name">Tanmay<br><span class="hero-name-accent">Tiwari</span></h1>
+            </div>
+
+            <div class="hero-terminal reveal">
+                <div class="terminal-bar">
+                    <span class="t-dot" style="background:#ff5f56;"></span>
+                    <span class="t-dot" style="background:#ffbd2e;"></span>
+                    <span class="t-dot" style="background:#27c93f;"></span>
+                    <span class="t-title">~/ terminal</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="t-prompt">tanmay@github</span> <span class="t-cmd">~/whoami</span></p>
+                    <p class="terminal-line t-output" id="typed-output"></p>
+                    <p class="terminal-line"><span class="t-cursor">█</span></p>
+                </div>
+            </div>
+
+            <div class="hero-description reveal">
+                <p>I build tools that turn data into art, monitor the physical world,<br class="br-desktop"> and push the limits of what software can do.</p>
+            </div>
+
+            <div class="hero-actions reveal">
+                <a href="https://github.com/tanmayhutt" target="_blank" id="btn-github" class="btn-main">
+                    <i class="ri-github-fill"></i>
+                    <span>View Profile</span>
+                    <i class="ri-arrow-right-up-line btn-arrow"></i>
+                </a>
+                <a href="#projects" class="btn-ghost">
+                    <span>Explore Work</span>
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="avatar-wrap reveal">
+                <div class="avatar-glow"></div>
+                <img src="https://avatars.githubusercontent.com/u/89214022?v=4" alt="Tanmay Tiwari" class="avatar" id="avatar">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring avatar-ring-2"></div>
+                <!-- Floating stats around avatar -->
+                <div class="float-stat float-stat-1">
+                    <span class="fs-value">516</span>
+                    <span class="fs-label">Contributions</span>
+                </div>
+                <div class="float-stat float-stat-2">
+                    <span class="fs-value">15★</span>
+                    <span class="fs-label">Top Repo</span>
+                </div>
+                <div class="float-stat float-stat-3">
+                    <span class="fs-value">5+</span>
+                    <span class="fs-label">Languages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar reveal">
+        <div class="stats-bar-inner">
+            <div class="sstat">
+                <span class="sstat-num count-up" data-target="13">0</span>
+                <span class="sstat-lbl">Repositories</span>
+            </div>
+            <div class="sstat-divider"></div>
+            <div class="sstat">
+                <span class="sstat-num count-up" data-target="14">0</span>
+                <span class="sstat-lbl">Followers</span>
+            </div>
+            <div class="sstat-divider"></div>
+            <div class="sstat">
+                <span class="sstat-num count-up" data-target="516">0</span>
+                <span class="sstat-lbl">Contributions / yr</span>
+            </div>
+            <div class="sstat-divider"></div>
+            <div class="sstat">
+                <span class="sstat-num">5+</span>
+                <span class="sstat-lbl">Languages</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">// PROJECTS</span>
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-sub">A selection of things I've built and shipped.</p>
+        </div>
+
+        <div class="projects-list">
+
+            <!-- GitWall — Featured -->
+            <a href="https://github.com/tanmayhutt/GitWall" target="_blank" class="project-featured reveal" id="project-gitwall">
+                <div class="pf-left">
+                    <div class="pf-number">01</div>
+                    <div class="pf-meta">
+                        <div class="pf-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Web App</span>
+                            <span class="tag tag-live">Live</span>
+                        </div>
+                        <h3 class="pf-name">GitWall</h3>
+                        <p class="pf-desc">Turns a GitHub contribution graph into high-quality iPhone wallpapers. Choose from multiple themes, device sizes, and contribution stats. Features shortcut-friendly URLs for auto-updating wallpapers on iOS.</p>
+                        <div class="pf-link">
+                            <span>gitwall.space</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-right">
+                    <div class="pf-preview-grid">
+                        <div class="contrib-graph" id="contrib-graph"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project Grid -->
+            <div class="project-grid">
+
+                <a href="https://github.com/tanmayhutt/hyprland-dotfiles" target="_blank" class="pcard reveal" id="project-hypr">
+                    <div class="pcard-top">
+                        <i class="ri-terminal-box-line pcard-icon"></i>
+                        <div class="pcard-stars"><i class="ri-star-fill"></i> 15</div>
+                    </div>
+                    <h3 class="pcard-name">hyprland-dotfiles</h3>
+                    <p class="pcard-desc">Premium Wayland compositor configuration. Custom GLSL shaders, animations, and aesthetic system setup.</p>
+                    <div class="pcard-foot">
+                        <div class="lang-pill">
+                            <span class="lp-dot" style="background:#5586a4"></span>GLSL
+                        </div>
+                        <i class="ri-arrow-right-up-line pcard-arrow"></i>
+                    </div>
+                </a>
+
+                <a href="https://github.com/tanmayhutt/WiFiSense" target="_blank" class="pcard reveal" id="project-wifi" style="--delay:0.1s">
+                    <div class="pcard-top">
+                        <i class="ri-wifi-line pcard-icon"></i>
+                        <div class="pcard-stars"><i class="ri-star-fill"></i> 3</div>
+                    </div>
+                    <h3 class="pcard-name">WiFiSense</h3>
+                    <p class="pcard-desc">Intelligent C++ system that monitors and analyzes WiFi networks in real time.</p>
+                    <div class="pcard-foot">
+                        <div class="lang-pill">
+                            <span class="lp-dot" style="background:#f34b7d"></span>C++
+                        </div>
+                        <i class="ri-arrow-right-up-line pcard-arrow"></i>
+                    </div>
+                </a>
+
+                <a href="https://github.com/tanmayhutt/Road-Condition-Monitoring-System" target="_blank" class="pcard reveal" id="project-road" style="--delay:0.15s">
+                    <div class="pcard-top">
+                        <i class="ri-road-map-line pcard-icon"></i>
+                        <div class="pcard-stars"><i class="ri-star-fill"></i> 1</div>
+                    </div>
+                    <h3 class="pcard-name">Road Condition Monitor</h3>
+                    <p class="pcard-desc">Embedded C system to monitor and report road surface conditions with sensor integration.</p>
+                    <div class="pcard-foot">
+                        <div class="lang-pill">
+                            <span class="lp-dot" style="background:#555"></span>C
+                        </div>
+                        <i class="ri-arrow-right-up-line pcard-arrow"></i>
+                    </div>
+                </a>
+
+                <a href="https://github.com/tanmayhutt/Youtube-Blend" target="_blank" class="pcard reveal" id="project-yt" style="--delay:0.2s">
+                    <div class="pcard-top">
+                        <i class="ri-youtube-line pcard-icon"></i>
+                        <div class="pcard-stars"><i class="ri-star-fill"></i> 1</div>
+                    </div>
+                    <h3 class="pcard-name">Youtube-Blend</h3>
+                    <p class="pcard-desc">A seamless YouTube interface enhancement tool. Live at youtube-blend.vercel.app.</p>
+                    <div class="pcard-foot">
+                        <div class="lang-pill">
+                            <span class="lp-dot" style="background:#3178c6"></span>TypeScript
+                        </div>
+                        <i class="ri-arrow-right-up-line pcard-arrow"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section" id="stack">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">// TOOLKIT</span>
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-sub">Languages and tools I work with.</p>
+        </div>
+        <div class="stack-grid reveal">
+            <div class="stack-item">
+                <i class="ri-code-s-slash-line"></i>
+                <span>TypeScript</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-terminal-line"></i>
+                <span>C / C++</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-javascript-line"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-paint-brush-line"></i>
+                <span>GLSL</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-github-fill"></i>
+                <span>Git & GitHub</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-cpu-line"></i>
+                <span>Embedded</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-global-line"></i>
+                <span>Web Dev</span>
+            </div>
+            <div class="stack-item">
+                <i class="ri-command-line"></i>
+                <span>Linux / Hypr</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="cta-section reveal">
+        <div class="cta-inner">
+            <p class="cta-eyebrow">Let's connect</p>
+            <h2 class="cta-title">Want to collaborate?</h2>
+            <p class="cta-sub">Check out my work on GitHub and reach out.</p>
+            <a href="https://github.com/tanmayhutt" target="_blank" class="btn-main" id="btn-cta">
+                <i class="ri-github-fill"></i>
+                <span>github.com/tanmayhutt</span>
+                <i class="ri-arrow-right-up-line btn-arrow"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>© 2026 Tanmay Tiwari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/tanmayhutt" target="_blank"><i class="ri-github-fill"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
