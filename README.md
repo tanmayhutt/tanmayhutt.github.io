@@ -1,12 +1,12 @@
-# GitHub Profile Landing Page 🚀
+# GitHub Profile Landing Page
 
 A sleek, premium, and interactive personal portfolio landing page designed to showcase my GitHub profile, projects, and tech stack. Built with modern web design principles like glassmorphism, dark mode aesthetics, and micro-animations.
 
-🌐 **Live Demo:** [tanmayhutt.github.io](https://tanmayhutt.github.io)
+**Live Demo:** [tanmayhutt.github.io](https://tanmayhutt.github.io)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Terminal Typewriter Animation:** A cycling terminal-style hero section.
 - **Glassmorphism UI:** Frosted glass project cards and navigation bar.
@@ -15,7 +15,7 @@ A sleek, premium, and interactive personal portfolio landing page designed to sh
 - **Procedural Contribution Graph:** An animated replica of the GitHub contribution grid.
 - **3D Hover Effects:** The profile avatar tilts based on mouse position.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **HTML5** — Semantic page structure.
 - **Vanilla CSS3** — Custom variables, grid/flexbox layouts, keyframe animations, and no external frameworks.
@@ -23,7 +23,7 @@ A sleek, premium, and interactive personal portfolio landing page designed to sh
 - **Google Fonts** — `Outfit` for body text and `JetBrains Mono` for terminal elements.
 - **Remix Icons** — Clean and lightweight icon set.
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 1. Clone this repository to your local machine:
    ```bash
@@ -35,7 +35,7 @@ A sleek, premium, and interactive personal portfolio landing page designed to sh
    ```
 3. Open `index.html` in your web browser. (No build step or local server required!)
 
-## 🌍 How to Deploy
+## How to Deploy
 
 This project is built to be hosted seamlessly on **GitHub Pages**.
 
