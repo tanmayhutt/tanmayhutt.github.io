@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#1c1c24" />
+  <text x="50" y="75" font-family="Georgia, serif" font-size="75" font-style="italic" fill="#9c65c3" text-anchor="middle">t</text>
+</svg>
