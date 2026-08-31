@@ -1,22 +1,12 @@
-# Tanmay Tiwari - Personal Portfolio
+# Tanmay Tiwari — Portfolio
 
-This repository contains the source code for my personal portfolio website, hosted at [tanmaytiwari.me](https://tanmaytiwari.me).
+Source for [tanmaytiwari.me](https://tanmaytiwari.me), a focused personal portfolio for selected software, systems, creative work, and three alternate desk experiences.
 
-## Overview
+## Structure
 
-The portfolio is designed as a sleek, tech-focused dashboard providing an overview of my professional output, open-source contributions, and technical environments.
+- `index.html` contains the page content and semantic structure.
+- `style.css` contains the responsive visual system.
+- `script.js` adds progressive reveal behavior and the current footer year.
+- `404.html`, `robots.txt`, and `sitemap.xml` cover basic public-site routing and discovery.
 
-### Contents
-
-- `index.html`: The core structural layout, semantic markup, and content aggregation.
-- `style.css`: The primary styling sheet utilizing a custom color palette, CSS Grid integrations, and hover animations.
-- `script.js`: Utility script handling Intersection Observer logic for scroll-based animations and smooth scrolling navigation.
-- `CNAME`: Domain routing configuration for GitHub Pages.
-
-## Deployment
-
-The site is configured for automatic deployment via GitHub Pages. Any changes pushed to the `main` branch will automatically reflect on the connected custom domain.
-
-## Licensing
-
-Code is provided as-is for reference and portfolio viewing.
+The site uses plain HTML, CSS, and JavaScript with no build step or third-party UI dependencies. GitHub Pages publishes the `main` branch through the custom domain in `CNAME`.
