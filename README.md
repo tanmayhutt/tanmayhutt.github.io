@@ -6,7 +6,7 @@ Source for [tanmaytiwari.me](https://tanmaytiwari.me), a focused personal portfo
 
 - `index.html` contains the page content and semantic structure.
 - `style.css` contains the responsive visual system.
-- `script.js` updates the footer year. Content, navigation, and project notes work without JavaScript.
+- `script.js` adds progressive reveal behavior and the current footer year.
 - `404.html`, `robots.txt`, and `sitemap.xml` cover basic public-site routing and discovery.
 
 The site uses plain HTML, CSS, and JavaScript with no build step or third-party UI dependencies. GitHub Pages publishes the `main` branch through the custom domain in `CNAME`.
