@@ -12,8 +12,7 @@
   <meta property="og:title" content="Tanmay Tiwari | Developer and creative technologist">
   <meta property="og:description" content="Software, systems, interfaces, and visual work with a point of view.">
   <meta property="og:url" content="https://tanmaytiwari.me/">
-  <meta property="og:image" content="https://github.com/tanmayhutt.png?size=1200">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@tanmayhutt">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
@@ -28,257 +27,231 @@
     <a class="logo" href="#top" aria-label="Tanmay Tiwari, back to top">TT<i></i></a>
     <nav aria-label="Primary">
       <a href="#work" data-nav="work">Work</a>
-      <a href="#practice" data-nav="practice">Practice</a>
+      <a href="#craft" data-nav="craft">Craft</a>
       <a href="#about" data-nav="about">About</a>
     </nav>
     <div class="nav-actions">
-      <button class="jump" type="button" data-command-open aria-haspopup="dialog">Jump to <kbd>Ctrl K</kbd></button>
+      <span class="clock" aria-label="Local time in India"><i></i><span data-clock>IST</span></span>
+      <button class="jump" type="button" data-command-open aria-haspopup="dialog">Jump <kbd>Ctrl K</kbd></button>
       <a class="resume" href="/resume/" target="_blank" rel="noopener">Résumé <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
     </div>
   </header>
 
   <main id="main">
+    <!-- Hero -->
     <section class="hero" id="top">
       <canvas class="field" data-field aria-hidden="true"></canvas>
-      <p class="status reveal"><i></i>Student, independent builder, open to collaborate</p>
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Developer / Creative technologist</p>
-          <h1>I make digital things <em>worth using.</em></h1>
-          <p class="lead">I’m Tanmay, a student working where software engineering, interface craft, Linux systems, and visual storytelling overlap.</p>
-          <div class="actions">
-            <a class="button primary" data-magnetic href="#work">Explore selected work <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-            <a class="button quiet" href="mailto:tiwaritanmay1021@gmail.com">Start a conversation</a>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Developer / Creative technologist / Student</p>
+          <h1 class="reveal" aria-label="Tanmay Tiwari">
+            <span class="line"><span>Tanmay</span></span>
+            <span class="line"><span><em>Tiwari</em><b class="dot">.</b></span></span>
+          </h1>
+          <p class="lead reveal">I make digital things <strong>worth using</strong>: private social apps, terminal tools, self-hosted servers, small embedded experiments, and the occasional cinematic edit.</p>
+          <div class="actions reveal">
+            <a class="button primary" data-magnetic href="#work">See the work <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
+            <a class="button quiet" href="mailto:tiwaritanmay1021@gmail.com">Say hello</a>
           </div>
         </div>
-        <aside class="profile card reveal" aria-label="Profile">
-          <div class="profile-top">
-            <img src="https://github.com/tanmayhutt.png?size=240" alt="Portrait of Tanmay Tiwari" width="88" height="88">
-            <small>Based in India<br>Working everywhere</small>
+
+        <figure class="portrait reveal" data-tilt>
+          <div class="portrait-frame">
+            <span class="initials" aria-hidden="true">TT</span>
+            <img src="/assets/tanmay.jpg" alt="Tanmay Tiwari" width="640" height="800" onerror="this.remove()">
           </div>
-          <p>Building products that feel clear, capable, and distinctly human.</p>
-          <dl>
-            <div><dt>Currently</dt><dd>Blend / Thwip</dd></div>
-            <div><dt>Learning through</dt><dd>Shipping</dd></div>
-          </dl>
-        </aside>
+          <figcaption>
+            <span>Based in India</span>
+            <span>Open to collaborate</span>
+          </figcaption>
+        </figure>
       </div>
-      <ul class="rail reveal" aria-label="Disciplines">
-        <li>Product engineering</li>
-        <li>Interface systems</li>
-        <li>Linux infrastructure</li>
-        <li>Visual storytelling</li>
+
+      <ul class="now reveal" aria-label="Right now">
+        <li><small>Building</small><b>Blend and Thwip</b></li>
+        <li><small>Running</small><b>An Arch server on an old laptop</b></li>
+        <li><small>Editing</small><b>Visual stories as @saul.3gp</b></li>
+        <li><small>Learning</small><b>By shipping, then fixing</b></li>
       </ul>
     </section>
 
+    <!-- Work -->
     <section class="section work" id="work" aria-labelledby="work-title">
       <header class="section-head reveal">
-        <div>
-          <p class="label">01 / Selected work</p>
-          <h2 id="work-title">Built across layers.</h2>
-        </div>
+        <p class="label">01 / Selected work</p>
+        <h2 id="work-title">Built across <em>layers.</em></h2>
         <p>Five projects spanning private social software, developer tooling, infrastructure, full-stack products, and embedded systems.</p>
       </header>
 
-      <div class="stage reveal" data-stage>
-        <div class="visual" data-visual="blend" aria-hidden="true">
-          <div class="grid"></div>
-          <i class="orb a"></i>
-          <i class="orb b"></i>
-          <span class="visual-index"><b data-visual-index>01</b> / 05</span>
-          <ol class="flow" data-visual-flow></ol>
-          <strong data-visual-mark>BL</strong>
+      <div class="showcase">
+        <div class="stage" aria-hidden="true">
+          <div class="visual" data-visual="blend">
+            <div class="grid"></div>
+            <i class="orb a"></i>
+            <i class="orb b"></i>
+            <span class="visual-index"><b data-visual-index>01</b> / 05</span>
+            <ol class="flow" data-visual-flow>
+              <li>Two people connect YouTube, read-only</li>
+              <li>Each taste profile stays separate</li>
+              <li>A guided reveal shows the overlap</li>
+            </ol>
+            <strong data-visual-mark>BL</strong>
+            <ol class="pips" data-pips><li class="on"></li><li></li><li></li><li></li><li></li></ol>
+          </div>
         </div>
 
-        <div class="panel">
-          <div class="tabs" role="tablist" aria-label="Selected projects" data-tabs hidden>
-            <button type="button" role="tab" id="tab-blend" aria-controls="project-blend" aria-selected="true" data-project="blend">Blend</button>
-            <button type="button" role="tab" id="tab-thwip" aria-controls="project-thwip" aria-selected="false" tabindex="-1" data-project="thwip">Thwip</button>
-            <button type="button" role="tab" id="tab-server" aria-controls="project-server" aria-selected="false" tabindex="-1" data-project="server">Arch server</button>
-            <button type="button" role="tab" id="tab-filmedin" aria-controls="project-filmedin" aria-selected="false" tabindex="-1" data-project="filmedin">FilmedIn</button>
-            <button type="button" role="tab" id="tab-wifisense" aria-controls="project-wifisense" aria-selected="false" tabindex="-1" data-project="wifisense">WiFiSense</button>
-          </div>
-
-          <article class="detail" id="project-blend" role="tabpanel" aria-labelledby="tab-blend" data-panel="blend" data-index="01" data-mark="BL" data-flow="Two people connect YouTube, read-only|Each taste profile stays separate|A guided reveal shows the overlap">
-            <div class="detail-top"><p>Private social product</p><span>In development</span></div>
+        <div class="projects">
+          <article class="project reveal" data-project="blend" data-index="01" data-mark="BL" data-flow="Two people connect YouTube, read-only|Each taste profile stays separate|A guided reveal shows the overlap">
+            <div class="project-top"><span>01</span><p>Private social product</p><em>In development</em></div>
             <h3>Blend</h3>
             <p class="desc">A two-person experience for comparing YouTube tastes through separate, read-only account connections and a shared guided reveal.</p>
+            <p class="focus"><small>Focus</small>Consent, privacy, and shared discovery</p>
             <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>MongoDB</li><li>OAuth 2.0</li></ul>
-            <footer>
-              <p><small>Focus</small><b>Consent, privacy, and shared discovery</b></p>
-              <a href="https://github.com/tanmayhutt/blend" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            </footer>
+            <a class="repo" href="https://github.com/tanmayhutt/blend" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           </article>
 
-          <article class="detail" id="project-thwip" role="tabpanel" aria-labelledby="tab-thwip" data-panel="thwip" data-index="02" data-mark="TH" data-flow="Discover coding agents installed locally|Switch providers mid-project|Carry finished context into the next tool">
-            <div class="detail-top"><p>Developer tool</p><span>Open source</span></div>
+          <article class="project reveal" data-project="thwip" data-index="02" data-mark="TH" data-flow="Discover coding agents installed locally|Switch providers mid-project|Carry finished context into the next tool">
+            <div class="project-top"><span>02</span><p>Developer tool</p><em>Open source</em></div>
             <h3>Thwip</h3>
             <p class="desc">A terminal interface for discovering local coding agents, switching providers mid-project, and carrying completed conversation context across tools.</p>
+            <p class="focus"><small>Focus</small>Continuity across local coding agents</p>
             <ul class="tags"><li>Python</li><li>Terminal UI</li><li>Agent tooling</li></ul>
-            <footer>
-              <p><small>Focus</small><b>Continuity across local coding agents</b></p>
-              <a href="https://github.com/tanmayhutt/thwip-cli" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            </footer>
+            <a class="repo" href="https://github.com/tanmayhutt/thwip-cli" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           </article>
 
-          <article class="detail" id="project-server" role="tabpanel" aria-labelledby="tab-server" data-panel="server" data-index="03" data-mark="AS" data-flow="An old Lenovo laptop, lid closed|Headless Arch Linux running Docker|Tailscale for admin, Cloudflare for the web">
-            <div class="detail-top"><p>Infrastructure</p><span>Self-hosted</span></div>
+          <article class="project reveal" data-project="server" data-index="03" data-mark="AS" data-flow="An old Lenovo laptop, lid closed|Headless Arch Linux running Docker|Tailscale for admin, Cloudflare for the web">
+            <div class="project-top"><span>03</span><p>Infrastructure</p><em>Self-hosted</em></div>
             <h3>Arch server</h3>
             <p class="desc">An old Lenovo laptop repurposed as a headless Arch Linux node for private storage, remote administration, and zero-port public web delivery.</p>
+            <p class="focus"><small>Focus</small>Private infrastructure from old hardware</p>
             <ul class="tags"><li>Arch Linux</li><li>Docker</li><li>Cloudflare</li><li>Tailscale</li></ul>
-            <footer>
-              <p><small>Focus</small><b>Private infrastructure from old hardware</b></p>
-              <a href="https://github.com/tanmayhutt/arch-server" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            </footer>
+            <a class="repo" href="https://github.com/tanmayhutt/arch-server" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           </article>
 
-          <article class="detail" id="project-filmedin" role="tabpanel" aria-labelledby="tab-filmedin" data-panel="filmedin" data-index="04" data-mark="FI" data-flow="Search films and shows through TMDB|Track what you watch and build playlists|Turn favourites into wallpapers">
-            <div class="detail-top"><p>Full-stack application</p><span>Deployed</span></div>
+          <article class="project reveal" data-project="filmedin" data-index="04" data-mark="FI" data-flow="Search films and shows through TMDB|Track what you watch and build playlists|Turn favourites into wallpapers">
+            <div class="project-top"><span>04</span><p>Full-stack application</p><em>Deployed</em></div>
             <h3>FilmedIn</h3>
             <p class="desc">A place for movie and television fans to track media, build playlists, and generate wallpapers, with authentication and a full deployment.</p>
+            <p class="focus"><small>Focus</small>Personal media tracking and discovery</p>
             <ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li><li>TMDB</li></ul>
-            <footer>
-              <p><small>Focus</small><b>Personal media tracking and discovery</b></p>
-              <a href="https://github.com/tanmayhutt/FilmedIn" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            </footer>
+            <a class="repo" href="https://github.com/tanmayhutt/FilmedIn" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           </article>
 
-          <article class="detail" id="project-wifisense" role="tabpanel" aria-labelledby="tab-wifisense" data-panel="wifisense" data-index="05" data-mark="WS" data-flow="ESP8266 samples Wi-Fi signal strength|Layered statistical filters remove noise|Changes are read as room presence">
-            <div class="detail-top"><p>Embedded experiment</p><span>Prototype</span></div>
+          <article class="project reveal" data-project="wifisense" data-index="05" data-mark="WS" data-flow="ESP8266 samples Wi-Fi signal strength|Layered statistical filters remove noise|Changes are read as room presence">
+            <div class="project-top"><span>05</span><p>Embedded experiment</p><em>Prototype</em></div>
             <h3>WiFiSense</h3>
             <p class="desc">ESP8266 firmware exploring room-presence detection through changes in Wi-Fi signal strength and layered statistical filtering.</p>
+            <p class="focus"><small>Focus</small>Sensing presence without cameras</p>
             <ul class="tags"><li>C++</li><li>ESP8266</li><li>Signal processing</li></ul>
-            <footer>
-              <p><small>Focus</small><b>Sensing presence without cameras</b></p>
-              <a href="https://github.com/tanmayhutt/WiFiSense" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            </footer>
+            <a class="repo" href="https://github.com/tanmayhutt/WiFiSense" target="_blank" rel="noopener">Open repository <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           </article>
         </div>
       </div>
 
-      <div class="workshop reveal" id="workshop">
-        <header>
-          <p class="label">Also in the workshop</p>
+      <div class="workshop" id="workshop">
+        <header class="reveal">
+          <h3>Also in the workshop</h3>
           <a href="https://github.com/tanmayhutt?tab=repositories" target="_blank" rel="noopener">All repositories <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
         </header>
         <ul>
-          <li>
-            <a href="https://github.com/tanmayhutt/hyprland-dotfiles" target="_blank" rel="noopener">
-              <b>Hyprland dotfiles</b>
-              <span>Hyprland and Zsh configuration for a fast, keyboard-driven Arch Linux desktop.</span>
-              <small>GLSL / Shell</small>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/tanmayhutt/Road-Condition-Monitoring-System" target="_blank" rel="noopener">
-              <b>Road Condition Monitoring</b>
-              <span>A vehicle-mounted sensing platform that detects road anomalies, geo-tags them with GPS, and streams them to a live dashboard.</span>
-              <small>STM32 / ESP32 / Python</small>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/tanmayhutt/typetrace-app" target="_blank" rel="noopener">
-              <b>TypeTrace</b>
-              <span>A cross-platform desktop app that tracks typing speed live, with a dashboard and a practice mode.</span>
-              <small>Electron / React</small>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/tanmayhutt/extract-what" target="_blank" rel="noopener">
-              <b>Extract What</b>
-              <span>A WhatsApp chat analyzer that turns an exported chat into statistics without the data leaving the browser.</span>
-              <small>JavaScript / Chart.js</small>
-            </a>
-          </li>
-          <li>
-            <a href="https://tanmayhutt.github.io/gun/" target="_blank" rel="noopener">
-              <b>GUN</b>
-              <span>The rulebook for a six-player trick-taking card game with a blind trump.</span>
-              <small>HTML / CSS</small>
-            </a>
-          </li>
+          <li class="reveal"><a class="card" href="https://github.com/tanmayhutt/hyprland-dotfiles" target="_blank" rel="noopener">
+            <small><i style="--c:#c9b2e8"></i>GLSL / Shell</small>
+            <b>Hyprland dotfiles</b>
+            <span>Hyprland and Zsh configuration for a fast, keyboard-driven Arch Linux desktop.</span>
+          </a></li>
+          <li class="reveal"><a class="card" href="https://github.com/tanmayhutt/Road-Condition-Monitoring-System" target="_blank" rel="noopener">
+            <small><i style="--c:#8fb3d9"></i>STM32 / ESP32 / Python</small>
+            <b>Road Condition Monitoring</b>
+            <span>A vehicle-mounted sensing platform that detects road anomalies, geo-tags them with GPS, and streams them to a live dashboard.</span>
+          </a></li>
+          <li class="reveal"><a class="card" href="https://github.com/tanmayhutt/typetrace-app" target="_blank" rel="noopener">
+            <small><i style="--c:#7fb8e6"></i>Electron / React</small>
+            <b>TypeTrace</b>
+            <span>A cross-platform desktop app that tracks typing speed live, with a dashboard and a practice mode.</span>
+          </a></li>
+          <li class="reveal"><a class="card" href="https://github.com/tanmayhutt/extract-what" target="_blank" rel="noopener">
+            <small><i style="--c:#e8c35a"></i>JavaScript / Chart.js</small>
+            <b>Extract What</b>
+            <span>A WhatsApp chat analyzer that turns an exported chat into statistics without the data leaving the browser.</span>
+          </a></li>
+          <li class="reveal"><a class="card" href="https://tanmayhutt.github.io/gun/" target="_blank" rel="noopener">
+            <small><i style="--c:#e38b6f"></i>HTML / CSS</small>
+            <b>GUN</b>
+            <span>The rulebook for a six-player trick-taking card game with a blind trump.</span>
+          </a></li>
         </ul>
       </div>
     </section>
 
-    <section class="section practice" id="practice" aria-labelledby="practice-title">
+    <!-- Craft -->
+    <section class="section craft" id="craft" aria-labelledby="craft-title">
       <header class="section-head reveal">
-        <div>
-          <p class="label">02 / How I work</p>
-          <h2 id="practice-title">One practice.<br>Several mediums.</h2>
-        </div>
-        <p>I move between layers because strong products are rarely just code or just visuals. They are systems of decisions.</p>
+        <p class="label">02 / Craft</p>
+        <h2 id="craft-title">One practice. <em>Several mediums.</em></h2>
+        <p>Strong products are rarely just code or just visuals. They are systems of decisions, so I move between the layers.</p>
       </header>
-      <div class="bento">
-        <article class="tile wide card reveal">
-          <span class="num">01</span>
-          <div class="art rings" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M8 34 20 22l7 7 13-15"/><path d="M32 14h8v8"/></svg>
-          </div>
-          <div class="tile-copy">
-            <p class="label">Product engineering</p>
-            <h3>From a useful premise to a working, deployed product.</h3>
-            <p>Explicit user flows, careful data boundaries, resilient interfaces, and deployment treated as part of the design.</p>
-          </div>
+      <ol class="disciplines">
+        <li class="reveal">
+          <span class="n">01</span>
+          <h3>Product engineering</h3>
+          <p>From a useful premise to a working, deployed product. Explicit user flows, careful data boundaries, and deployment treated as part of the design.</p>
           <small>React / TypeScript / Python / APIs</small>
-        </article>
-        <article class="tile card reveal">
-          <span class="num">02</span>
-          <div class="art signal" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <div class="tile-copy">
-            <p class="label">Systems</p>
-            <h3>Tools close to the machine.</h3>
-            <p>Linux environments, terminal software, small servers, networking, and embedded experiments.</p>
-          </div>
+        </li>
+        <li class="reveal">
+          <span class="n">02</span>
+          <h3>Systems</h3>
+          <p>Tools close to the machine. Linux environments, terminal software, small servers, networking, and embedded experiments.</p>
           <small>Linux / Docker / C++ / CLI</small>
-        </article>
-        <article class="tile card reveal">
-          <span class="num">03</span>
-          <div class="art mini" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="tile-copy">
-            <p class="label">Interface craft</p>
-            <h3>Clear hierarchy with a pulse.</h3>
-            <p>Responsive, keyboard-friendly experiences with motion that supports understanding.</p>
-          </div>
+        </li>
+        <li class="reveal">
+          <span class="n">03</span>
+          <h3>Interface craft</h3>
+          <p>Clear hierarchy with a pulse. Responsive, keyboard-friendly experiences with motion that supports understanding.</p>
           <small>HTML / CSS / JavaScript / Accessibility</small>
-        </article>
-        <article class="tile quote wide card reveal">
-          <span class="num">04</span>
-          <blockquote>“Structure first. Character second. Polish all the way through.”</blockquote>
-          <ol class="timeline" aria-label="Process">
-            <li>Frame</li>
-            <li>Prototype</li>
-            <li>Build</li>
-            <li>Refine</li>
-          </ol>
-          <small>A repeatable process, not a fixed aesthetic</small>
-        </article>
+        </li>
+        <li class="reveal">
+          <span class="n">04</span>
+          <h3>Visual stories</h3>
+          <p>Cinematic video edits and visual references. The same eye for pacing and framing ends up in the interfaces I build.</p>
+          <small>Editing / Motion / Framing</small>
+        </li>
+      </ol>
+      <div class="process reveal">
+        <blockquote>“Structure first. Character second. Polish all the way through.”</blockquote>
+        <ol aria-label="Process">
+          <li><b>Frame</b><span>Find the real problem and who it is for.</span></li>
+          <li><b>Prototype</b><span>Make the rough version fast and honest.</span></li>
+          <li><b>Build</b><span>Ship it with real data and real edges.</span></li>
+          <li><b>Refine</b><span>Fix where it breaks until it feels inevitable.</span></li>
+        </ol>
       </div>
     </section>
 
+    <!-- About -->
     <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="reveal">
+      <div class="about-head reveal">
         <p class="label">03 / About</p>
-        <h2 id="about-title">Curious enough to cross disciplines. Serious enough to finish.</h2>
+        <h2 id="about-title">Curious enough to cross disciplines. <em>Serious enough to finish.</em></h2>
       </div>
       <div class="about-copy reveal">
         <p class="about-lead">I’m a student and independent builder. I learn fastest by making real things, finding where they break, and refining them until the interaction feels inevitable.</p>
-        <p>My work moves between full-stack software, developer tools, self-hosted infrastructure, embedded hardware, interface design, and cinematic video editing.</p>
+        <p>My work moves between full-stack software, developer tools, self-hosted infrastructure, embedded hardware, interface design, and cinematic video editing. Most of it lives on GitHub, and the rest ends up on YouTube.</p>
         <div class="actions">
           <a class="button primary dark" href="/resume/" target="_blank" rel="noopener">Read my résumé <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
           <a class="button quiet dark" href="mailto:tiwaritanmay1021@gmail.com">Email me</a>
         </div>
       </div>
       <ul class="social reveal" aria-label="Elsewhere">
-        <li><a href="https://github.com/tanmayhutt" target="_blank" rel="noopener me"><b>GitHub</b><small>Code and experiments</small></a></li>
-        <li><a href="https://www.linkedin.com/in/tanmay-tiwari-72719526a/" target="_blank" rel="noopener me"><b>LinkedIn</b><small>Professional profile</small></a></li>
-        <li><a href="https://x.com/tanmayhutt" target="_blank" rel="noopener me"><b>X</b><small>Notes in public</small></a></li>
-        <li><a href="https://www.youtube.com/@saul.3gp" target="_blank" rel="noopener me"><b>YouTube</b><small>Visual stories</small></a></li>
-        <li><a href="https://www.instagram.com/tanmayhutt/" target="_blank" rel="noopener me"><b>Instagram</b><small>Current fragments</small></a></li>
-        <li><a href="https://in.pinterest.com/tanmayhutt/" target="_blank" rel="noopener me"><b>Pinterest</b><small>Visual references</small></a></li>
+        <li><a href="https://github.com/tanmayhutt" target="_blank" rel="noopener me"><b>GitHub</b><small>Code and experiments</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/tanmay-tiwari-72719526a/" target="_blank" rel="noopener me"><b>LinkedIn</b><small>Professional profile</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        <li><a href="https://x.com/tanmayhutt" target="_blank" rel="noopener me"><b>X</b><small>Notes in public</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@saul.3gp" target="_blank" rel="noopener me"><b>YouTube</b><small>Visual stories</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        <li><a href="https://www.instagram.com/tanmayhutt/" target="_blank" rel="noopener me"><b>Instagram</b><small>Current fragments</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+        <li><a href="https://in.pinterest.com/tanmayhutt/" target="_blank" rel="noopener me"><b>Pinterest</b><small>Visual references</small><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
       </ul>
     </section>
 
+    <!-- Desk experiments -->
     <section class="labs" id="desks" aria-labelledby="desks-title">
       <details class="reveal">
         <summary>
@@ -287,27 +260,21 @@
         </summary>
         <p class="labs-note">The same portfolio, rebuilt as three playful interfaces. Each opens in a new tab.</p>
         <ul>
-          <li>
-            <a href="/linux-desk/" target="_blank" rel="noopener">
-              <span class="preview linux" aria-hidden="true"><i></i><i></i><i></i><em></em></span>
-              <b>01 / Linux desk</b>
-              <small>A Hyprland-style tiling desktop with windows, a launcher, and a terminal.</small>
-            </a>
-          </li>
-          <li>
-            <a href="/spotify-desk/" target="_blank" rel="noopener">
-              <span class="preview spotify" aria-hidden="true"><i></i><i></i><i></i><em></em></span>
-              <b>02 / Spotify desk</b>
-              <small>Projects as a playlist, with a working player and mobile navigation.</small>
-            </a>
-          </li>
-          <li>
-            <a href="/nokia-desk/" target="_blank" rel="noopener">
-              <span class="preview nokia" aria-hidden="true"><i></i><em></em></span>
-              <b>03 / Nokia desk</b>
-              <small>A Nokia 3310 in the browser, with menus, sounds, and playable Snake.</small>
-            </a>
-          </li>
+          <li><a href="/linux-desk/" target="_blank" rel="noopener">
+            <span class="preview linux" aria-hidden="true"><i></i><i></i><i></i><em></em></span>
+            <b>01 / Linux desk</b>
+            <small>A Hyprland-style tiling desktop with windows, a launcher, and a terminal.</small>
+          </a></li>
+          <li><a href="/spotify-desk/" target="_blank" rel="noopener">
+            <span class="preview spotify" aria-hidden="true"><i></i><i></i><i></i><em></em></span>
+            <b>02 / Spotify desk</b>
+            <small>Projects as a playlist, with a working player and mobile navigation.</small>
+          </a></li>
+          <li><a href="/nokia-desk/" target="_blank" rel="noopener">
+            <span class="preview nokia" aria-hidden="true"><i></i><em></em></span>
+            <b>03 / Nokia desk</b>
+            <small>A Nokia 3310 in the browser, with menus, sounds, and playable Snake.</small>
+          </a></li>
         </ul>
       </details>
     </section>
@@ -330,7 +297,7 @@
         <button type="button" data-command-close>Esc</button>
       </header>
       <a href="#work"><i>01</i>Selected work<kbd>W</kbd></a>
-      <a href="#practice"><i>02</i>Practice<kbd>P</kbd></a>
+      <a href="#craft"><i>02</i>Craft<kbd>C</kbd></a>
       <a href="#about"><i>03</i>About<kbd>A</kbd></a>
       <a href="#desks"><i>04</i>Desk experiments<kbd>D</kbd></a>
       <a href="/resume/" target="_blank" rel="noopener"><i>R</i>Résumé<kbd>R</kbd></a>

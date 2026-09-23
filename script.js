@@ -55,64 +55,55 @@ if ('IntersectionObserver' in window) {
   sectionObserver.observe($('#top'));
 }
 
-/* Project stage: every project is in the HTML; tabs enhance it when scripts run. */
-const tabs = $$('[data-project]');
-const panels = $$('[data-panel]');
-const visual = $('[data-visual-flow]').parentElement;
+/* Work showcase: the sticky visual follows whichever project is in view. */
+const showcase = $('.showcase');
+const projects = $$('[data-project]');
+const visual = $('[data-visual]');
 const visualIndex = $('[data-visual-index]');
 const visualMark = $('[data-visual-mark]');
 const visualFlow = $('[data-visual-flow]');
+const pips = $$('[data-pips] li');
 let swapTimer;
 
-function renderVisual(panel) {
-  visual.dataset.visual = panel.dataset.panel;
-  visualIndex.textContent = panel.dataset.index;
-  visualMark.textContent = panel.dataset.mark;
-  visualFlow.replaceChildren(...panel.dataset.flow.split('|').map(step => {
+function renderVisual(project) {
+  visual.dataset.visual = project.dataset.project;
+  visualIndex.textContent = project.dataset.index;
+  visualMark.textContent = project.dataset.mark;
+  visualFlow.replaceChildren(...project.dataset.flow.split('|').map(step => {
     const li = document.createElement('li');
     li.textContent = step;
     return li;
   }));
+  pips.forEach((pip, i) => pip.classList.toggle('on', i === projects.indexOf(project)));
 }
 
-function selectProject(key, focus = false) {
-  const panel = panels.find(p => p.dataset.panel === key);
-  if (!panel) return;
-  tabs.forEach(tab => {
-    const active = tab.dataset.project === key;
-    tab.setAttribute('aria-selected', active);
-    tab.tabIndex = active ? 0 : -1;
-    if (active && focus) tab.focus();
-    if (active) tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-  });
-  panels.forEach(p => { p.hidden = p !== panel; });
-
+function activate(project) {
+  if (project.classList.contains('is-active')) return;
+  projects.forEach(p => p.classList.toggle('is-active', p === project));
   clearTimeout(swapTimer);
-  if (reduced) {
-    renderVisual(panel);
-  } else {
-    visual.classList.add('swap');
-    swapTimer = setTimeout(() => {
-      renderVisual(panel);
-      visual.classList.remove('swap');
-    }, 180);
-  }
+  if (reduced) return renderVisual(project);
+  visual.classList.add('swap');
+  swapTimer = setTimeout(() => {
+    renderVisual(project);
+    visual.classList.remove('swap');
+  }, 180);
 }
 
-$('[data-tabs]').hidden = false;
-panels.forEach((panel, i) => { panel.hidden = i !== 0; });
-renderVisual(panels[0]);
+if ('IntersectionObserver' in window) {
+  showcase.classList.add('live');
+  projects[0].classList.add('is-active');
+  const projectObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) activate(entry.target); });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  projects.forEach(project => projectObserver.observe(project));
+}
 
-tabs.forEach((tab, i) => {
-  tab.addEventListener('click', () => selectProject(tab.dataset.project));
-  tab.addEventListener('keydown', event => {
-    const keys = { ArrowLeft: i - 1, ArrowRight: i + 1, Home: 0, End: tabs.length - 1 };
-    if (!(event.key in keys)) return;
-    event.preventDefault();
-    const next = (keys[event.key] + tabs.length) % tabs.length;
-    selectProject(tabs[next].dataset.project, true);
-  });
-});
+/* Local time in India */
+const clock = $('[data-clock]');
+const timeFormat = new Intl.DateTimeFormat('en-IN', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Kolkata' });
+function tick() { clock.textContent = `${timeFormat.format(new Date())} IST`; }
+tick();
+setInterval(tick, 15000);
 
 /* Pointer light on cards and a gentle pull on the main call to action */
 if (!reduced && finePointer) {
@@ -121,6 +112,19 @@ if (!reduced && finePointer) {
     card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
     card.style.setProperty('--my', `${event.clientY - rect.top}px`);
   }));
+  const tilt = $('[data-tilt]');
+  const frame = $('.portrait-frame', tilt);
+  tilt.addEventListener('pointermove', event => {
+    const rect = tilt.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - .5;
+    const y = (event.clientY - rect.top) / rect.height - .5;
+    frame.style.setProperty('--ry', `${x * 8}deg`);
+    frame.style.setProperty('--rx', `${y * -8}deg`);
+  });
+  tilt.addEventListener('pointerleave', () => {
+    frame.style.setProperty('--ry', '0deg');
+    frame.style.setProperty('--rx', '0deg');
+  });
   $$('[data-magnetic]').forEach(el => {
     el.addEventListener('pointermove', event => {
       const rect = el.getBoundingClientRect();
@@ -239,7 +243,7 @@ const openDialog = () => {
   $('a', dialog).focus();
 };
 const closeDialog = () => { if (dialog.open) dialog.close(); };
-const shortcuts = { w: '#work', p: '#practice', a: '#about', d: '#desks' };
+const shortcuts = { w: '#work', c: '#craft', a: '#about', d: '#desks' };
 
 $('[data-command-open]').addEventListener('click', openDialog);
 $('[data-command-close]').addEventListener('click', closeDialog);
