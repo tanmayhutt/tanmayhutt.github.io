@@ -231,8 +231,8 @@ h2 em, h1 em { color: var(--yellow); }
   background: linear-gradient(180deg, transparent 55%, #10111399);
 }
 .initials { position: absolute; inset: 0; display: grid; place-items: center; font: italic 400 clamp(5rem, 11vw, 9rem)/1 var(--serif); letter-spacing: -.06em; color: #f0ede6d9; }
-.portrait img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; filter: grayscale(1) contrast(1.05); transition: filter .6s, transform .8s var(--ease); }
-.portrait:hover img { filter: none; transform: scale(1.03); }
+.portrait img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; transition: transform .8s var(--ease); }
+.portrait:hover img { transform: scale(1.03); }
 .portrait figcaption { display: flex; justify-content: space-between; gap: 1rem; margin-top: 12px; color: var(--quiet); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
 
 .now {
@@ -536,7 +536,6 @@ dialog::backdrop { background: #000a; -webkit-backdrop-filter: blur(5px); backdr
 
 @media (hover: none) {
   .card::before { display: none; }
-  .portrait img { filter: none; }
 }
 
 @media (max-width: 1100px) {
